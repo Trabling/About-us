@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+      body{text-align: center;}
+        .container{display: flex; justify-content: center;}
+        .box{margin: 30px; padding: 15px; border: solid; border-color:black;}
+   </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Document</title>
+ </head>
+ <body>
+   <h1>Yujeong</h1>
+   <div class="container">
+   {% for teammate in teammates %}
+   <div class = "box"> 
+      {{teammate}}
+      <p> {{teammate.Name}} </p>
+      <p> {{teammate.Birth}} </p>
+      <p> {{teammate.Nickname}} </p>
+      <p> {{teammate.Major}} </p>
+      <p> {{teammate.MBTI}} </p>
+      <p> {{teammate.Hobby}} </p>
+      <p> {{teammate.Food}} </p>
+   </div>
+   {% endfor %}
+   </div>
+ </body>
+</html>
